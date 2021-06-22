@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css">
+  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
+<body>
+  <nav>
+    <a href="{{ `/` | relURL }}">Home</a> /
+    <a href="404">404</a>
+  </nav>
+  {{ block "main" . }}{{ end }}
+  <script src="https://cdn.jsdelivr.net/npm/navaid"></script>
+  <script>
+    // get last path from base url
+    const BASE_LAST_PATH = "{{ .Site.BaseURL }}".split('/')[3];
+  </script>
+  <script src="{{ .Site.BaseURL }}js/app.js"></script>
+</body>
+</html>

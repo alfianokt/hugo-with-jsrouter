@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fuga explicabo quia autem est accusantium. Quod sit voluptas quasi beatae repellat et, in tempore numquam, quisquam illum quae, perferendis laborum!</p>
+  <ul>
+    {{ range .Paginator.Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}
